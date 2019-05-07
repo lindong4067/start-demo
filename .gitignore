@@ -1,2 +1,6 @@
 *.class
 *.log
+<<<<<<< HEAD
+=======
+.idea/
+>>>>>>> start demo init
