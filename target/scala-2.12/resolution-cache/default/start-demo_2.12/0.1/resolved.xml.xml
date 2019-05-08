@@ -4,7 +4,7 @@
 		module="start-demo_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20190506100101"
+		publication="20190507174646"
 	>
 		<description>
 		start-demo
@@ -34,5 +34,6 @@
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.12" rev="2.5.22" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-testkit_2.12" rev="2.5.22" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-stream_2.12" rev="2.5.22" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

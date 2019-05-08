@@ -86,10 +86,10 @@ object ProcessorDemo extends App {
   var system = ActorSystem("processorDemo")
   var assembler = system.actorOf(Props[Assembler], "assembler")
   var processor1 = system.actorOf(Props(classOf[Processor], assembler), "processor1")
-  var processor2 = system.actorOf(Props(classOf[Processor], assembler), "processor2")
-  var processor3 = system.actorOf(Props(classOf[Processor], assembler), "processor3")
-  var processor4 = system.actorOf(Props(classOf[Processor], assembler), "processor4")
-  var distributor = system.actorOf(Props(classOf[Distributor], assembler, List(processor4, processor3, processor2, processor1)), "distributor")
+//  var processor2 = system.actorOf(Props(classOf[Processor], assembler), "processor2")
+//  var processor3 = system.actorOf(Props(classOf[Processor], assembler), "processor3")
+//  var processor4 = system.actorOf(Props(classOf[Processor], assembler), "processor4")
+  var distributor = system.actorOf(Props(classOf[Distributor], assembler, List(processor1)), "distributor")
 
   distributor ! GiveMeOne
 }
