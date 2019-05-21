@@ -10,14 +10,6 @@ class MyActor extends Actor{
     case "test" => log.info("Received \"test\"")
     case _  => log.info("Received unknown message")
   }
-
-  override def preStart(): Unit = super.preStart()
-
-  override def postStop(): Unit = super.postStop()
-
-  override def preRestart(reason: Throwable, message: Option[Any]): Unit = super.preRestart(reason, message)
-
-  override def postRestart(reason: Throwable): Unit = super.postRestart(reason)
 }
 
 class MyActor2(args: String*) extends Actor {
